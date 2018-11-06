@@ -1,0 +1,85 @@
+#btGallery{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 150px;
+    height: 150px;
+    // padding: 1rem;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border:1px solid $or;
+    transform-origin: center center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    img{
+        max-width: 80px;
+    }
+}
+
+#photos{
+    display: none;
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 150px;
+    height: 150px;
+    // transform: translate(-50%, -50%);
+    background-color: #fff;
+    transform-origin: center center;
+    z-index: 1;
+}
+
+#close{
+    display: none;
+    position: fixed;
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    bottom:0;
+    right:0;
+    z-index: 99999;
+    background-color: rgba(255,255,255,.6);
+    font-weight: bold;
+}
+#close:hover{
+    cursor: pointer;
+}
+
+.galleryMariage{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    display: none;
+
+    .owl-stage-outer, .owl-stage{
+        height: 100%;
+        div{
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+}
+.galleryMariage .owl-nav, .galleryMariage .owl-dots{
+    position: fixed;
+    bottom:0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.galleryMariage .owl-nav{
+    width: 50px;
+    justify-content: space-around;
+    color:#fff;
+}
+.galleryMariage .owl-nav button{
+    transform: translateY(-3px);
+}
+.galleryMariage .owl-dots{
+    left:50px;
+}

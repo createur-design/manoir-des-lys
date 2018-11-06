@@ -1,0 +1,77 @@
+.devis_form{
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    .col-sm-12, .col-sm-6{
+        width: 100%;
+    }
+    .col-xs-8{
+        width: 85%;
+    }
+    .col-xs-4{
+        width: 15%;
+    }
+
+    input{
+        width: 100%;
+    }
+    input[type="checkbox"]{
+        width: auto;
+    }
+    .rangeslider{
+        margin: 0 7.5px;
+    }
+
+    #fld_2887748_1-wrap, #fld_8842187_1-wrap, #fld_3156077_1-wrap, .interesse{
+        text-align: center;
+    }
+    #fld_2887748_1-wrap h3{
+        // position: fixed;
+        display: inline-block;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 999;
+        background-color: $or; //rgba(0,0,0,.6)
+        color: #fff;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 0;
+        font-size: 1rem;
+        h3{
+            margin:0;
+        }
+    }
+
+    .btnNext{
+        width: auto;
+        background-color: $or;
+        color:#fff;
+        border:none;
+        border-radius: 8px;
+        padding:1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .btnPrev{
+        width: auto;
+        border :none;
+        background: none;
+        font-size: .8rem;
+    }
+
+    $dimStep : 2rem;
+    .etape{
+        display: inline-block;
+        text-align: center;
+        line-height: $dimStep;
+        color:$or;
+        border: 1px solid $or;
+        border-radius: 100%;
+        width: $dimStep;
+        height: $dimStep;
+        margin-right: .5rem;
+        font-size: .8rem;
+        font-weight: bold;
+    }
+}

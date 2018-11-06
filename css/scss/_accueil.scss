@@ -1,0 +1,186 @@
+.intro{
+    display: block;
+    h1{
+        margin-bottom:0;
+    }
+    h1:after{
+        content:'';
+        display: block;
+        width: 120px;
+        height: 3px;
+        margin: auto;
+        background-color: $or;
+    }
+    .bgPresentation{
+        height: 300px;
+        //https://via.placeholder.com/1920x1280 
+        background-position: center center;
+        background-size: cover;
+        box-shadow: inset -10px 1px 40px 0px rgba(0,0,0,0.4);
+    }  
+    .txtPresentation{
+        padding:1rem;
+        text-align: center;
+        transform: translateY(-50px);
+        img{
+            // display: none;
+            max-width: 250px;
+            width: 100%;
+        }
+    } 
+}
+.max-size-90 img{
+    width: 100%;
+    max-width: 90px;
+}
+.owl-carousel .owl-item img {
+    width: auto;
+    margin:0;
+}
+.owl-carousel .owl-nav{
+    font-size: 2rem;
+}
+.owl-carousel .owl-nav, .owl-carousel .owl-dots{
+    display: inline-block;
+    vertical-align: middle;
+}
+.owl-carousel .owl-dot span{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    margin-left:10px;
+    transition: width .3s;
+    background-color: $grisClair;
+}
+.owl-carousel .owl-dot.active span {
+    background-color:$or;
+    width: 20px;
+    line-height: 2rem;
+    vertical-align: middle;
+}
+
+/* SECTION TEMOIGNAGE */
+
+section.temoignage{
+    position: relative;
+    // background: url('https://via.placeholder.com/1920x600');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    // margin-top:50px;
+    padding: 0 0 50px 0;
+    z-index: 1;
+    h2{
+        color:#fff;
+        text-shadow: 1px 1px 1px #333;
+    }
+    .avatar{
+        display: block;
+        width: 80px;
+        height: 80px;
+        // margin-right: 10px;
+        margin-left: .9375rem; //bug padding row in row in row
+        overflow: hidden;
+        border-radius: 80px;
+        box-shadow: 1px 1px 1px #333;
+    }
+    .bg_avis{
+        position: relative;
+        background: rgba(0,0,0,.7);
+        padding:1rem;
+        color:#e2e2e2;
+        .avis{
+            line-height: 2rem;
+            .dashicons{
+                color:#fff;
+                font-size: 1.3rem;
+            }
+        } 
+        .dashicons{
+            color:$or;
+        }
+    }
+    .bg_avis:after{
+        content:'';
+        position: absolute;
+        bottom:25px;
+        left:-20px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 12.5px 20px 12.5px 0;
+        border-color: transparent rgba(0,0,0,.7) transparent transparent;
+    }
+}
+section.temoignage:after{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+/* ****************** */
+.maps{
+    width: 100%;
+    height: 350px;
+}
+.maps img{
+    margin:0;
+}
+@media screen and(min-width:768px){
+    $bgWidth : 70%;
+    .intro{
+        height: 100vh; 
+        display: flex;
+        align-items: center;
+        h1:after{
+            width: 100%;
+            transform: translateX(-50%);
+        }
+        .bgPresentation{
+            width: $bgWidth;
+            height: 100%;
+        }
+        .txtPresentation{
+            width: calc(100% - #{$bgWidth});
+            padding:0 50px;            
+        } 
+        .scrollTo{
+            position: absolute;
+            bottom:.5rem;
+            right:15%;
+            width: 2px;
+            height: 50px;
+            background-color: $or;
+            transform: translateX(-50%);
+            animation: bounce .8s ease-in infinite;
+        }
+        .scrollTo::after{
+            content:'';
+            position: absolute;
+            bottom:0;
+            left:50%;
+            transform: translateX(-50%) rotate(-45deg);
+            transform-origin: bottom;
+            width: 2px;
+            height: 25px;
+            background-color: $or;            
+        }
+        @keyframes bounce {
+            0% {
+                bottom : .5rem;
+            }
+            50% {
+                bottom : 1rem;
+            }
+            100% {
+                bottom : .5rem;
+            }
+
+        }
+    }
+}

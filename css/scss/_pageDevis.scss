@@ -1,0 +1,15 @@
+.introDevis{
+    li{
+        list-style: none;
+        line-height: 2rem;
+    }
+    li:before{
+        content:'';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        vertical-align: middle;
+        margin-right: 5px;
+        background: url('../img/check-icon.svg');
+    }
+}
